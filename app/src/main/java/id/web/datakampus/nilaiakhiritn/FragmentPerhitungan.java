@@ -49,7 +49,7 @@ public class FragmentPerhitungan extends Fragment implements View.OnClickListene
         if (et_np1.getText().toString().isEmpty() || et_np2.getText().toString().isEmpty() || et_np3.getText().toString().isEmpty() || et_np4.getText().toString().isEmpty() || et_cp1.getText().toString().isEmpty() || et_cp2.getText().toString().isEmpty()) {
             Toast.makeText(getActivity(), "Isi semua nilai terlebih dahulu !", Toast.LENGTH_SHORT).show();
         } else {
-            //Do Later
+            perhitungan();
         }
     }
 
