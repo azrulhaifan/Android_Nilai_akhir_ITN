@@ -12,7 +12,7 @@ import android.widget.EditText;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FragmentPerhitungan extends Fragment {
+public class FragmentPerhitungan extends Fragment implements View.OnClickListener {
 
     EditText et_np1,et_np2, et_np3, et_np4, et_cp1, et_cp2, et_hasil;
 
@@ -30,8 +30,23 @@ public class FragmentPerhitungan extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_perhitungan, container, false);
 
+        et_np1 = (EditText) rootView.findViewById(R.id.txt_np1);
+        et_np2 = (EditText) rootView.findViewById(R.id.txt_np2);
+        et_np3 = (EditText) rootView.findViewById(R.id.txt_np3);
+        et_np4 = (EditText) rootView.findViewById(R.id.txt_np4);
+        et_cp1 = (EditText) rootView.findViewById(R.id.txt_cp1);
+        et_cp2 = (EditText) rootView.findViewById(R.id.txt_cp2);
+        et_hasil = (EditText) rootView.findViewById(R.id.txt_hasil);
+        bt_hitung = (Button) rootView.findViewById(R.id.bt_hitung);
+
+        bt_hitung.setOnClickListener(this);
+
         return rootView;
     }
 
 
+    @Override
+    public void onClick(View v) {
+
+    }
 }
