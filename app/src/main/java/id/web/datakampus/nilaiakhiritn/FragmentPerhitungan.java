@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -44,6 +45,13 @@ public class FragmentPerhitungan extends Fragment implements View.OnClickListene
         return rootView;
     }
 
+    public void cek_kondisi() {
+        if (et_np1.getText().toString().isEmpty() || et_np2.getText().toString().isEmpty() || et_np3.getText().toString().isEmpty() || et_np4.getText().toString().isEmpty() || et_cp1.getText().toString().isEmpty() || et_cp2.getText().toString().isEmpty()) {
+            Toast.makeText(getActivity(), "Isi semua nilai terlebih dahulu !", Toast.LENGTH_SHORT).show();
+        } else {
+            //Do Later
+        }
+    }
 
     @Override
     public void onClick(View v) {
