@@ -1,13 +1,82 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="12dp"
     tools:context="id.web.datakampus.nilaiakhiritn.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ini adalah Fragment Perhitungan"
+        android:textSize="25dp"
+        android:text="Form Perhitungan"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"/>
+        android:id="@+id/txt_judul"
+        android:layout_marginTop="55dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nilai Proses 1"
+        android:id="@+id/txt_np1"
+        android:layout_below="@id/txt_judul"
+        android:layout_marginTop="15dp"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nilai Proses 2"
+        android:id="@+id/txt_np2"
+        android:layout_below="@+id/txt_np1"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nilai Proses 3"
+        android:id="@+id/txt_np3"
+        android:layout_below="@+id/txt_np2"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nilai Proses 4"
+        android:id="@+id/txt_np4"
+        android:layout_below="@+id/txt_np3"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nilai CP 1"
+        android:id="@+id/txt_cp1"
+        android:layout_below="@+id/txt_np4"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nilai CP 2"
+        android:id="@+id/txt_cp2"
+        android:layout_below="@+id/txt_cp1"
+        android:inputType="numberDecimal"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hitung"
+        android:id="@+id/bt_hitung"
+        android:layout_below="@+id/txt_cp2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Hasil Nilai Akhir"
+        android:id="@+id/txt_hasil"
+        android:layout_below="@+id/bt_hitung"
+        android:layout_marginTop="25dp"/>
 
 </RelativeLayout>
