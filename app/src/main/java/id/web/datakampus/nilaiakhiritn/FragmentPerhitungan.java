@@ -53,6 +53,33 @@ public class FragmentPerhitungan extends Fragment implements View.OnClickListene
         }
     }
 
+    public void perhitungan() {
+        np1 = Double.parseDouble(et_np1.getText().toString());
+        np2 = Double.parseDouble(et_np2.getText().toString());
+        np3 = Double.parseDouble(et_np3.getText().toString());
+        np4 = Double.parseDouble(et_np4.getText().toString());
+        cp1 = Double.parseDouble(et_cp1.getText().toString());
+        cp2 = Double.parseDouble(et_cp2.getText().toString());
+
+        npa = ((0.2 * np1) + (0.2 * np2) + (0.2 * np3) + (0.4 * np4));
+
+        if (npa > cp1) {
+            if (npa > cp2) {
+                na = npa;
+            } else {
+                na = cp2;
+            }
+        } else {
+            if (cp1 > cp2) {
+                na = cp1;
+            } else {
+                na = cp2;
+            }
+        }
+
+        et_hasil.setText(String.valueOf(na));
+    }
+
     @Override
     public void onClick(View v) {
 
