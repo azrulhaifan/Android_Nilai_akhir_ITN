@@ -82,6 +82,8 @@ public class FragmentPerhitungan extends Fragment implements View.OnClickListene
 
     @Override
     public void onClick(View v) {
-
+        if (v == bt_hitung){
+            cek_kondisi();
+        }
     }
 }
